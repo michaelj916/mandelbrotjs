@@ -13,6 +13,7 @@ body {
 
 #mandelbrot {
     overflow: none;
+    position: relative;
 }
 
 .title {
@@ -32,4 +33,15 @@ body {
     left: 20px;
     font-size: 14px;
     color: #e9e1e1a8;
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        left: 10px;
+        top: 10px;
+    }
+    .instructions {
+        left: 10px;
+        bottom: 10px;
+    }
 }
