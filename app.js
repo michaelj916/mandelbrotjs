@@ -1,13 +1,4 @@
-  
-// ------------------------------------------------------------------------
-// Drawing Mandelbrot Fractals With HTML5 Canvas And JavaScript
-// (c) 2015 Rembound.com
-// http://rembound.com/articles/drawing-mandelbrot-fractals-with-html5-canvas-and-javascript
-// ------------------------------------------------------------------------
-
-// The function gets called when the window is fully loaded
 window.onload = function() {
-    // Get the canvas and context
     var canvas = document.getElementById("mandelbrot"); 
     var context = canvas.getContext("2d");
     
@@ -15,11 +6,11 @@ window.onload = function() {
     canvas.width = window.innerWidth - 12;
     canvas.height = window.innerHeight - 12;
 
-    // Width and height of the image
+    // image width + height
     var imagew = canvas.width;
     var imageh = canvas.height;
     
-    // Image Data (RGBA)
+    // image data 
     var imagedata = context.createImageData(imagew, imageh);
     
     // Pan and zoom parameters
@@ -35,18 +26,11 @@ window.onload = function() {
     // The maximum number of iterations per pixel
     var maxiterations = 250;
     
-    // Initialize the game
+    // initialize the game
     function init() {
-        // Add mouse events
         canvas.addEventListener("mousedown", onMouseDown);
-        
-        // Generate palette
         generatePalette();
-        
-        // Generate image
         generateImage();
-    
-        // Enter main loop
         main(0);
     }
     
@@ -124,9 +108,9 @@ window.onload = function() {
         // Apply the color
         var pixelindex = (y * imagew + x) * 4;
         imagedata.data[pixelindex] = color.r;
-        imagedata.data[pixelindex+13] = color.g;
-        imagedata.data[pixelindex+2] = color.b;
-        imagedata.data[pixelindex+3] = 255;
+        imagedata.data[pixelindex + 3] = color.g;
+        imagedata.data[pixelindex + 1] = color.b;
+        imagedata.data[pixelindex + 3] = 255;
     }
     
     // Zoom the fractal
