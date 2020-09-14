@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mandelbrot Set</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h3>Mandelbrot Generator</h3>
-
-    <canvas id="mandelbrot" width="640" height="480"></canvas>
+    <div class="wrapper">
+        <div class="title">Mandelbrot Generator</div>
+        <div class="instructions">
+            click to zoom, <br>
+            ctrl + click to zoom-out, <br>
+            shift + click to pan.
+        </div>
+        <canvas id="mandelbrot" width="window.innerWidth" height="window.innerHeight"></canvas>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>

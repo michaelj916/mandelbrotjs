@@ -11,6 +11,10 @@ window.onload = function() {
     var canvas = document.getElementById("mandelbrot"); 
     var context = canvas.getContext("2d");
     
+    // making the canvas fullscreen
+    canvas.width = window.innerWidth - 12;
+    canvas.height = window.innerHeight - 12;
+
     // Width and height of the image
     var imagew = canvas.width;
     var imageh = canvas.height;
