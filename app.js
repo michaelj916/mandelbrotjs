@@ -3,8 +3,8 @@ window.onload = function() {
     var context = canvas.getContext("2d");
     
     // making the canvas fullscreen
-    canvas.width = window.innerWidth - 12;
-    canvas.height = window.innerHeight - 12;
+    canvas.width = window.innerWidth ;
+    canvas.height = window.innerHeight ;
 
     // image width + height
     var imagew = canvas.width;
